@@ -37,5 +37,31 @@
         
         <!-- Script JS -->
         <script src="./script.js"></script>
+
+        div class="music-player">
+    <audio id="background-music" loop autoplay>
+        <source src="https://github.com/masrahmat-id/romance/raw/main/tiw-niw-niw.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    </div>
+         
+    <footer>
+        &copy; BY RAHMATTULLAH | NIM : 056105086
+    </footer>
+     <script>
+    const audio = document.getElementById('background-music');
+
+    // Fungsi untuk memulai musik
+    function playAudio() {
+        audio.play().catch(error => {
+            console.log("Autoplay diblokir:", error);
+        });
+        // Hapus event listener ini setelah berhasil diputar
+        document.removeEventListener('click', playAudio);
+    }
+
+    // Dengarkan klik pertama pengguna di mana saja di halaman
+    document.addEventListener('click', playAudio);
+</script>
     </body>
 </html>
