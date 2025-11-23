@@ -62,16 +62,19 @@
   animation-timing-function: ease-in-out; /* Animasi mulus, lambat di awal dan akhir */
 }
 
-/*Kupu Kupu1*/
+  /*Kupu Kupu1*/
 /* Terapkan animasi pada gambar */
 #kupukupu1 {
   width: 50px; /* Contoh ukuran, sesuaikan jika perlu */
   height: auto;
-  /* Membuat gambar "mengapung" di sisi kiri */
-  float: right;
-
   
-  /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
-  margin-right: 0px;
-  margin-bottom: 5px;
+  /* --- Modifikasi Utama: Posisikan di ujung kanan secara absolut --- */
+  position: absolute; /* Mengeluarkan elemen dari aliran normal */
+  right: 0;          /* Jarak 0 dari tepi kanan wadah induk yang memiliki 'position: relative' */
+  top: 0;            /* Jarak 0 dari tepi atas wadah induk */
+  /* ---------------------------------------------------------------- */
+
+  /* Properti margin di sini biasanya tidak diperlukan lagi */
+  margin-right: 0px; 
+  margin-bottom: 5px; /* Atau hapus jika sudah menggunakan 'top: 0' */
 }
