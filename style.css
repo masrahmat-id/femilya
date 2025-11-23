@@ -235,3 +235,11 @@ body {
     color:rgb(20, 20, 20);
     font-size: 30px;
 }
+
+.cute-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #ff3399; /* Pink yang lebih kuat */
+    margin: 15px 0;
+}
