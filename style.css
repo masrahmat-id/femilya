@@ -284,3 +284,30 @@ body::before {
     color: #ff3399; /* Pink yang lebih kuat */
     margin: 15px 0;
 }
+
+.bg-femi { 
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            top: 0; 
+            bottom: 0; 
+            background: rgba(96, 90, 82, 0.37); /* Overlay gelap/transparan */
+        }
+
+        /* Styling Konten Utama */
+        .box-femi { 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            max-width: 500px; /* Batasan lebar agar konten tidak terlalu lebar */
+            color: #fff; 
+        }
+
+        .bgtr-femi { 
+            background-color: rgba(0,0,0,0.7); /* Background transparan untuk box */
+            padding: 20px;
+            border-radius: 10px; /* Opsional: membuat sudut lebih lembut */
+        }
