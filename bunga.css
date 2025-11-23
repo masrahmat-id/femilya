@@ -43,26 +43,6 @@
   left: 0;  
 }
 
-/* Kupu Kupu 3 - Pojok KANAN BAWAH */
-#kupukupu3 {
-  width: 50px;
-  height: auto;
-  
-  /* --- Transformasi Akan Berpusat di Bagian Bawah --- */
-  transform-origin: bottom center; 
-
-  /* Animasi Melambai */
-  animation-name: gerakKananKiri;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  
-  /* Posisi Pojok KANAN BAWAH */
-  position: absolute; 
-  bottom: 0;  
-  right: 0;   
-}
-
 /* KUPU KUPU 1 (#kupukupu1) - Pojok KANAN ATAS */
 #kupukupu1 {
   width: 50px;
@@ -82,4 +62,12 @@
   /* ----------------------------------------------- */
   
   /* Tambahkan properti lain yang diperlukan (width, height, dll.) */
+}
+
+/* Kupu Kupu 3 - Pojok KIRI BAWAH */
+#kupukupu3 {
+  /* Posisi Pojok KANAN BAWAH */
+  position: absolute; 
+  bottom: 0;  
+  right: 0;   
 }
