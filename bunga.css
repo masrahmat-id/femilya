@@ -61,3 +61,97 @@
   animation-iteration-count: infinite;  /* Ulangi terus menerus */
   animation-timing-function: ease-in-out; /* Animasi mulus, lambat di awal dan akhir */
 }
+
+/*Kupu Kupu1*?
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    overflow: hidden;
+    margin: 0;
+}
+
+.butterfly-wrapper {
+    position: relative;
+    width: 200px; /* Lebar total kupu-kupu */
+    height: 200px; /* Tinggi total kupu-kupu */
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: float 5s ease-in-out infinite alternate;
+}
+
+.butterfly-wing {
+    position: absolute;
+    width: 50%; /* Setengah dari lebar wrapper */
+    height: 100%;
+    overflow: hidden; /* Penting untuk memotong gambar */
+    top: 0;
+    transform-origin: center center; /* Default rotation origin */
+    animation: wing-flap 0.5s ease-in-out infinite alternate;
+}
+
+.butterfly-wing img {
+    position: absolute;
+    width: 200px; /* Lebar asli gambar penuh */
+    height: 200px; /* Tinggi asli gambar penuh */
+    top: 0;
+    left: 0;
+}
+
+/* Sayap Kiri */
+.left-wing {
+    left: 0;
+    transform-origin: 100% 50%; /* Titik rotasi di tengah tubuh */
+}
+.left-wing img {
+    left: 0; /* Tampilkan bagian kiri gambar */
+}
+
+/* Sayap Kanan */
+.right-wing {
+    left: 50%; /* Mulai dari tengah wrapper */
+    transform-origin: 0% 50%; /* Titik rotasi di tengah tubuh */
+}
+.right-wing img {
+    left: -100px; /* Geser gambar ke kiri untuk menampilkan sayap kanan */
+    /* Ini - (lebar asli gambar / 2) */
+}
+
+/* Animasi untuk mengepak */
+@keyframes wing-flap {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(60deg); /* Menutup ke depan */
+    }
+}
+
+/* Kustomisasi untuk sayap kanan agar berbalik saat mengepak */
+.right-wing {
+    animation-name: wing-flap-reverse;
+}
+
+@keyframes wing-flap-reverse {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-60deg); /* Menutup ke depan (arah berlawanan) */
+    }
+}
+
+/* Animasi melayang (sama seperti sebelumnya) */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
