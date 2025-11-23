@@ -69,6 +69,7 @@ body {
 .envelope.open .envelope-message {
     transform: translate(-50%, -50%) translateY(-50px); /* Pesan keluar */
     opacity: 1; /* Pesan muncul */
+    z-index: 15; /* PASTIKAN DI ATAS SEMUA (PERUBAHAN DISINI) */
 }
 
 /* Bagian Depan Amplop */
