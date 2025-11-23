@@ -258,10 +258,10 @@ body::before {
 }
 
 .femilya {
-    text-align: center;
+    text-align: left;
     font-family: 'Handlee', cursive;
     /* 1. Warna Teks Utama (Pink) */
-    color: #FF6863; /* Hot Pink */
+    color: #FF6863; /* Pink */
     font-size: 30px;
     padding: 10px;
     padding-bottom: 95px;
@@ -302,3 +302,24 @@ body::before {
             padding: 20px;
             border-radius: 10px; /* Opsional: membuat sudut lebih lembut */
         }
+
+.footerfemilya {
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    /* 1. Warna Teks Utama (Pink) */
+    color: #FF6863; /* Pink */
+    font-size: 8px;
+    padding: 10px;
+    
+    /* 2. Stroke Warna Putih dan Bayangan Selaras */
+    /* Menggunakan multi-layer text-shadow untuk simulasi stroke */
+    text-shadow: 
+        /* Stroke Putih (putih solid di 4 arah) */
+        1px 1px 0 #FFF, /* kanan-bawah */
+        -1px 1px 0 #FFF, /* kiri-bawah */
+        1px -1px 0 #FFF, /* kanan-atas */
+        -1px -1px 0 #FFF, /* kiri-atas */
+        
+        /* Bayangan Selaras (Bayangan pink lembut, offset sedikit) */
+        3px 3px 5px rgba(255, 105, 180, 0.7); /* X-offset, Y-offset, Blur, Warna Shadow */
+}
