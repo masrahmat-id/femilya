@@ -43,8 +43,8 @@
   left: 0;  
 }
 
-/* BUNGA 2 (#bungaKuning) - Pojok KANAN BAWAH */
-#bungaKuning {
+/* Kupu Kupu 3 - Pojok KANAN BAWAH */
+#kupukupu3 {
   width: 50px;
   height: auto;
   
@@ -72,4 +72,14 @@
   position: absolute; 
   top: 0;   
   right: 0; 
+}
+
+#kupukupu2 {
+ /* --- Properti Wajib untuk Pojok Kanan Bawah --- */
+  position: absolute; /* Mengeluarkan elemen dari aliran dokumen normal */
+  bottom: 0;          /* Jarak nol dari tepi bawah */
+  right: 0;           /* Jarak nol dari tepi kanan */
+  /* ----------------------------------------------- */
+  
+  /* Tambahkan properti lain yang diperlukan (width, height, dll.) */
 }
