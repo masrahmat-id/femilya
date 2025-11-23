@@ -1,4 +1,3 @@
-/* BUNGA 1 */
 /* Definisikan putaran dari 0 derajat ke 360 derajat */
 @keyframes putarBunga {
   from {
@@ -9,24 +8,7 @@
   }
 }
 
-/* Terapkan animasi pada gambar */
-#bunga {
-  animation-name: putarBunga;      /* Nama keyframes yang digunakan */
-  animation-duration: 4s;          /* Durasi satu putaran (misalnya, 4 detik) */
-  animation-iteration-count: infinite; /* Ulangi terus menerus */
-  animation-timing-function: linear; /* Kecepatan konstan tanpa percepatan/perlambatan */
-  width: 45px; /* Ukuran yang sudah diubah */
-  
-  /* Membuat gambar "mengapung" di sisi kiri */
-  float: left;
-  
-  /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
-  margin-right: 15px;
-  margin-bottom: 5px;
-}
-
-/* BUNGA 2 */
-/* Definisikan keyframes untuk gerakan kanan-kiri */
+/* Definisikan keyframes untuk gerakan kanan-kiri (digunakan untuk Bunga Kuning) */
 @keyframes gerakKananKiri {
   0%, 100% {
     transform: rotate(0deg); /* Posisi awal */
@@ -39,42 +21,47 @@
   }
 }
 
-/* Terapkan animasi pada gambar bunga kuning */
-#bungaKuning {
-  width: 50px; /* Contoh ukuran, sesuaikan jika perlu */
-  height: auto;
-  /* Membuat gambar "mengapung" di sisi kiri */
-  float: right;
-
-  /* --- Tambahan Penting: Transformasi Akan Berpusat di Bagian Bawah --- */
-  transform-origin: bottom center; 
-
-  /* Menggunakan ROTATE (Rotasi) agar tampak melambai dari pangkal */
-  animation-name: gerakKananKiri;       /* Nama keyframes */
-  animation-duration: 4s;              /* Durasi satu siklus (misalnya, 4 detik) */
+/* BUNGA 1 (#bunga) - Pojok KIRI ATAS */
+#bunga {
+  animation-name: putarBunga;      /* Nama keyframes yang digunakan */
+  animation-duration: 4s;          /* Durasi satu putaran (misalnya, 4 detik) */
   animation-iteration-count: infinite; /* Ulangi terus menerus */
-  animation-timing-function: ease-in-out; /* Animasi mulus */
+  animation-timing-function: linear; /* Kecepatan konstan tanpa percepatan/perlambatan */
+  width: 45px;
+  
+  /* Posisi Pojok KIRI ATAS */
+  position: absolute; 
+  top: 0;   
+  left: 0;  
 }
 
-  animation-name: gerakKananKiri;       /* Nama keyframes */
-  animation-duration: 4s;               /* Durasi satu siklus (misalnya, 4 detik) */
-  animation-iteration-count: infinite;  /* Ulangi terus menerus */
-  animation-timing-function: ease-in-out; /* Animasi mulus, lambat di awal dan akhir */
-}
-
-  /*Kupu Kupu1*/
-/* Terapkan animasi pada gambar */
-#kupukupu1 {
-  width: 50px; /* Contoh ukuran, sesuaikan jika perlu */
+/* BUNGA 2 (#bungaKuning) - Pojok KANAN BAWAH */
+#bungaKuning {
+  width: 50px;
   height: auto;
   
-  /* --- Modifikasi Utama: Posisikan di ujung kanan secara absolut --- */
-  position: absolute; /* Mengeluarkan elemen dari aliran normal */
-  right: 0;          /* Jarak 0 dari tepi kanan wadah induk yang memiliki 'position: relative' */
-  top: 0;            /* Jarak 0 dari tepi atas wadah induk */
-  /* ---------------------------------------------------------------- */
+  /* --- Transformasi Akan Berpusat di Bagian Bawah --- */
+  transform-origin: bottom center; 
 
-  /* Properti margin di sini biasanya tidak diperlukan lagi */
-  margin-right: 0px; 
-  margin-bottom: 5px; /* Atau hapus jika sudah menggunakan 'top: 0' */
+  /* Animasi Melambai */
+  animation-name: gerakKananKiri;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  
+  /* Posisi Pojok KANAN BAWAH */
+  position: absolute; 
+  bottom: 0;  
+  right: 0;   
+}
+
+/* KUPU KUPU 1 (#kupukupu1) - Pojok KANAN ATAS */
+#kupukupu1 {
+  width: 50px;
+  height: auto;
+  
+  /* Posisi Pojok KANAN ATAS */
+  position: absolute; 
+  top: 0;   
+  right: 0; 
 }
