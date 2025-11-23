@@ -291,7 +291,7 @@ body::before {
             right: 0; 
             top: 0; 
             bottom: 0; 
-            background: rgba(96, 90, 82, 0.5); /* Overlay gelap/transparan */
+            background: rgba(170, 170, 170, 0.5); /* Overlay gelap/transparan */
         }
 
         /* Styling Konten Utama */
@@ -302,7 +302,7 @@ body::before {
             transform: translate(-50%, -50%);
             text-align: center;
             width: 80%;
-            max-width: 8400px; /* Batasan lebar agar konten tidak terlalu lebar */
+            max-width: 840px; /* Batasan lebar agar konten tidak terlalu lebar */
             color: #fff; 
         }
 
