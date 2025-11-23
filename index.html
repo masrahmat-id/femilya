@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="envelope-style.css">
+    
+    <style>
+        body { opacity: 0; transition: opacity 0.5s; }
+    </style>
 </head>
 <body>
 
@@ -20,13 +24,43 @@
             <div class="envelope-front"></div>
             <div class="envelope-back"></div>
             <div class="envelope-flap"></div>
+            
             <div class="envelope-message">
-                <h2>Untukmu, Bidadariku!</h2>
-                <p>Ayo, buka! Ada pesan istimewa menantimu!</p>
+                <h2>Cinta Sejati Untukmu!</h2>
+                <p>Sayangku,</p>
+                <p>Setiap hari bersamamu adalah lembaran paling indah dalam buku kehidupanku. Kamu adalah alasan senyumku, rumah tempat hatiku berlabuh, dan mimpi yang tak pernah ingin aku bangunkan.</p>
+                <p>Terima kasih sudah menjadi dirimu yang luar biasa. Aku mencintaimu, hari ini, besok, dan selamanya!</p>
+                <br>
+                <p>Dari seseorang yang selalu merindukanmu,</p>
+                <p>❤️ [Nama Anda]</p>
             </div>
         </div>
         <p class="instruction">Ketuk Amplopnya</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tampilkan body setelah semua dimuat
+            document.body.style.opacity = '1'; 
+
+            const envelope = document.getElementById('envelope');
+            const instruction = document.querySelector('.instruction');
+            
+            envelope.addEventListener('click', function() {
+                // Toggle class 'open' untuk memicu animasi CSS
+                this.classList.toggle('open'); 
+
+                if (this.classList.contains('open')) {
+                    // Sembunyikan instruksi dengan lembut saat dibuka
+                    instruction.style.opacity = '0';
+                    instruction.style.transition = 'opacity 0.5s';
+                } else {
+                    // Tampilkan instruksi lagi saat ditutup
+                    instruction.style.opacity = '1';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
