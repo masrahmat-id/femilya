@@ -66,9 +66,8 @@
 /* Terapkan animasi pada gambar */
 #kupukupu1 {
   width: 50px; /* Ukuran yang sudah diubah */
-  display: flex;
-  justify-content: flex-end;
-  
+  /* Membuat gambar "mengapung" di sisi kiri */
+  float: right;
   
   /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
   margin-right: 0px;
