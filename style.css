@@ -83,12 +83,11 @@ body::before {
     background-color: white;
     width: 90%;
     height: 90%;
-    top: 5%;
+    top: 20%;
     border-radius: 10px;
     box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
 }
 
 .letter:after {
@@ -244,7 +243,7 @@ body::before {
     font-size: 14px;
     text-transform: uppercase;
     margin: 20px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 10px;
     line-height: 2em;
     text-decoration: none;
