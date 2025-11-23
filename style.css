@@ -1,0 +1,178 @@
+/*
+|--------------------------------------------------------------------------
+| 1. PENGATURAN GLOBAL & VIEWPORT (MOBILE-FIRST)
+|--------------------------------------------------------------------------
+| Memastikan tampilan terbatas pada lebar HP (Maks 480px).
+*/
+
+:root {
+    --primary-pink: #ff69b4;   /* Hot Pink */
+    --light-pink: #ffc0cb;     /* Light Pink */
+    --font-color: #5d345f;     /* Ungu gelap */
+    --envelope-width: 300px;
+    --envelope-height: 200px;
+}
+
+body {
+    /* Atur Latar Belakang (Ganti 'bg.jpg' dengan nama file gambar Anda) */
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    font-family: 'Handlee', cursive;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/*
+* KUNCI: Pembatasan tampilan agar selalu terlihat seperti HP di laptop (Max 480px).
+*/
+.main-container {
+    max-width: 480px; /* Batasi lebar maksimal konten */
+    width: 100%;
+    margin: 0 auto;  /* Pusatkan di tengah laptop */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Latar semi-transparan */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. STYLING AMPLop (ENVELOPE)
+|--------------------------------------------------------------------------
+*/
+
+.envelope {
+    position: relative;
+    width: var(--envelope-width);
+    height: var(--envelope-height);
+    margin: 40px auto;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    perspective: 1000px;
+}
+
+/* Kunci Animasi: Tampilan Saat Dibuka */
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg); /* Penutup berputar */
+    z-index: 10;
+}
+
+.envelope.open .envelope-message {
+    transform: translate(-50%, -50%) translateY(-50px); /* Pesan keluar */
+    opacity: 1; /* Pesan muncul */
+}
+
+/* Bagian Depan Amplop */
+.envelope-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-pink);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Bagian Belakang Amplop */
+.envelope-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-pink);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Penutup Amplop (Flap) */
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--primary-pink);
+    border-radius: 8px 8px 0 0;
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Stiker */
+.sticker {
+    position: absolute;
+    font-size: 24px;
+    z-index: 4;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.5);
+}
+
+.left-top { top: -5px; left: 5px; transform: rotate(-15deg); }
+.right-bottom { bottom: -5px; right: 5px; transform: rotate(15deg); }
+
+
+/* Pesan di Dalam Amplop */
+.envelope-message {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    /* Posisi Awal: Di dalam amplop, Sembunyi */
+    transform: translate(-50%, -50%) translateY(0); 
+    background-color: white;
+    border: 3px dashed var(--primary-pink);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: all 0.7s ease-in-out;
+    z-index: 0; 
+    color: var(--font-color);
+}
+
+.envelope-message h2 {
+    color: var(--primary-pink);
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.cute-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #ff3399; /* Pink yang lebih kuat */
+    margin: 15px 0;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* Instruksi Ketuk */
+.instruction {
+    color: var(--font-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animasi untuk Instruksi */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
