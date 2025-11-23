@@ -20,50 +20,32 @@
         <div class="envelope-container">
             <div class="envelope" id="envelope">
                 
-                <div class="sticker left-top">💖</div>
-                <div class="sticker right-bottom">✨</div>
-                
-                <div class="envelope-front"></div>
-                <div class="envelope-back"></div>
-                <div class="envelope-flap"></div>
-                
-                <div class="envelope-message">
-                    <h2>Pesan Rahasia!</h2>
-                    <p class="cute-text">
-                        Buah cherry buah manggis,<br>
-                        Femy cantik manis!
-                    </p>
-                    <p class="signature">Dari: Pengagum Rahasia ❤️</p>
+                <div class="envelope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="words line1">Hello there,</p>
+                    <p class="words line2">Will you be my Valentine?</p>
+                    <p class="words line3">Love,</p>
+                    <p class="words line4">Remy</p>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
                 </div>
             </div>
-            <p class="instruction">Ketuk Amplopnya untuk Membuka</p>
+        </div>
+        <div class="reset">
+            <button id="open">Open</button>
+            <button id="reset">Close</button>
+        </div>
+        
+        <!-- Script JS -->
+        <script src="./script.js"></script>
         </div>
 
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Tampilkan body setelah semua dimuat
-            document.body.style.opacity = '1'; 
-
-            const envelope = document.getElementById('envelope');
-            const instruction = document.querySelector('.instruction');
-            
-            envelope.addEventListener('click', function() {
-                // Toggle class 'open' untuk memicu animasi CSS
-                this.classList.toggle('open'); 
-
-                if (this.classList.contains('open')) {
-                    // Sembunyikan instruksi dengan lembut saat dibuka
-                    instruction.style.opacity = '0';
-                    instruction.style.transition = 'opacity 0.5s';
-                } else {
-                    // Tampilkan instruksi lagi saat ditutup
-                    instruction.style.opacity = '1';
-                }
-            });
-        });
-    </script>
-
-</body>
+    </body>
 </html>
