@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Handlee', cursive;
     height: 100vh;
     margin: 0;
     padding: 0;
