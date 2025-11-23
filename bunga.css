@@ -65,9 +65,11 @@
 /*Kupu Kupu1*/
 /* Terapkan animasi pada gambar */
 #kupukupu1 {
-  width: 50px; /* Ukuran yang sudah diubah */
+  width: 50px; /* Contoh ukuran, sesuaikan jika perlu */
+  height: auto;
   /* Membuat gambar "mengapung" di sisi kiri */
   float: right;
+
   
   /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
   margin-right: 0px;
