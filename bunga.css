@@ -1,0 +1,17 @@
+/* Definisikan putaran dari 0 derajat ke 360 derajat */
+@keyframes putarBunga {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Terapkan animasi pada gambar */
+#bunga {
+  animation-name: putarBunga;      /* Nama keyframes yang digunakan */
+  animation-duration: 4s;          /* Durasi satu putaran (misalnya, 4 detik) */
+  animation-iteration-count: infinite; /* Ulangi terus menerus */
+  animation-timing-function: linear; /* Kecepatan konstan tanpa percepatan/perlambatan */
+}
