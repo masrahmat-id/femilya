@@ -263,8 +263,8 @@ body::before {
     /* 1. Warna Teks Utama (Pink) */
     color: #FF6863; /* Hot Pink */
     font-size: 30px;
-    padding: 20px;
-    padding: 60px;
+    padding: 10px;
+    padding-bottom: 60px;
     
     /* 2. Stroke Warna Putih dan Bayangan Selaras */
     /* Menggunakan multi-layer text-shadow untuk simulasi stroke */
@@ -297,7 +297,7 @@ body::before {
             width: 80%;
             max-width: 840px; /* Batasan lebar agar konten tidak terlalu lebar */
             color: #fff; 
-            background-color: rgba(100, 90, 80, 0.7); /* Background transparan untuk box */
+            background-color: rgba(100, 120, 150, 0.7); /* Background transparan untuk box */
             padding: 20px;
             border-radius: 10px; /* Opsional: membuat sudut lebih lembut */
         }
