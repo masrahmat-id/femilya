@@ -7,7 +7,37 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    /* Properti untuk full layar */
     background-image: url('https://github.com/masrahmat-id/pantun/raw/main/bg2.jfif');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-attachment: fixed; /* Opsional: Membuat background tetap saat scrolling */
+    
+    /* Penting: Setel posisi relatif untuk pseudo-element ::before */
+    position: relative;
+    /* Penting: Setel z-index agar konten di atas background */
+    z-index: 1; 
+}
+
+/* Pseudo-element ::before untuk efek Blur */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Masukkan gambar yang sama di pseudo-element */
+    background-image: url('https://github.com/masrahmat-id/pantun/raw/main/bg2.jfif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Terapkan filter blur */
+    filter: blur(5px); /* Ganti nilai 5px sesuai tingkat blur yang diinginkan */
+    
+    /* Penting: Setel z-index di bawah konten body */
+    z-index: -1; 
 }
 
 #envelope {
