@@ -71,6 +71,6 @@
   float: right;
   
   /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
-  margin-right: 15px;
+  margin-right: 0px;
   margin-bottom: 5px;
 }
