@@ -1,12 +1,12 @@
 .dekorasi1 {
-    /* Ganti '.nama-wadah' dengan class atau id dari <div> induk Anda */
+    /* WADAH INDUK: Harus ada position: relative; */
     position: relative;
-    height: 20px;
-    /* (Opsional) Tentukan tinggi wadah jika ingin bunga dan kupu-kupu berada di pojok dalamnya */
-    /* height: 20px; */ 
+    /* PERHATIAN: Tinggi 20px terlalu kecil untuk menampung gambar 45px! */
+    /* height: 20px; Ganti menjadi nilai yang lebih besar, misalnya 500px, atau auto jika konten di dalamnya tinggi. */
+    
 }
 
-/* Definisikan putaran dari 0 derajat ke 360 derajat */
+/* Definisikan keyframes putaran dan goyangan */
 @keyframes putarBunga {
   from {
     transform: rotate(0deg);
@@ -16,58 +16,64 @@
   }
 }
 
-/* Definisikan keyframes untuk gerakan kanan-kiri (digunakan untuk Bunga Kuning) */
 @keyframes gerakKananKiri {
   0%, 100% {
-    transform: rotate(0deg); /* Posisi awal */
+    transform: rotate(0deg);
   }
   25% {
-    transform: rotate(5deg); /* Miring 5 derajat ke kanan */
+    transform: rotate(5deg);
   }
   75% {
-    transform: rotate(-5deg); /* Miring 5 derajat ke kiri */
+    transform: rotate(-5deg);
   }
 }
 
-/* BUNGA 1 (#bunga) - Pojok KIRI ATAS */
+/* ---------------------------------------------------- */
+/* PENGATURAN 4 POJOK                                   */
+/* ---------------------------------------------------- */
+
+/* 1. #bunga - Posisi Pojok Kanan Atas */
 #bunga {
-  animation-name: putarBunga;      /* Nama keyframes yang digunakan */
-  animation-duration: 4s;          /* Durasi satu putaran (misalnya, 4 detik) */
-  animation-iteration-count: infinite; /* Ulangi terus menerus */
-  animation-timing-function: linear; /* Kecepatan konstan tanpa percepatan/perlambatan */
+  animation-name: putarBunga;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   width: 45px;
   
-  /* Posisi Pojok KIRI ATAS */
-  position: absolute; 
+  /* POSISI KIRI ATAS */
+  position: absolute;
   top: 0;   
   left: 0;  
 }
 
-/* KUPU KUPU 1 (#kupukupu1) - Pojok KANAN ATAS */
-#kupukupu1 {
-  width: 50px;
+/* 2. #kupukupu1 (Posisi Pojok Kanan Atas) */
+#kupukupu1 { 
+  width: 50px; /* Tambahkan ukuran */
+  height: auto;
+  /* POSISI KANAN ATAS */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 3. #kupukupu2 - Posisi Pojok Kiri Bawah */
+#kupukupu2 {
+  width: 50px; /* Tambahkan ukuran */
   height: auto;
   
-  /* Posisi Pojok KANAN ATAS */
-  position: absolute; 
-  top: 0;   
-  right: 0; 
-}
-
-#kupukupu2 {
- /* --- Properti Wajib untuk Pojok Kanan Bawah --- */
-  position: absolute; /* Mengeluarkan elemen dari aliran dokumen normal */
-  bottom: 0;          /* Jarak nol dari tepi bawah */
-  right: 0;           /* Jarak nol dari tepi kanan */
-  /* ----------------------------------------------- */
-  
-  /* Tambahkan properti lain yang diperlukan (width, height, dll.) */
-}
-
-/* Kupu Kupu 3 - Pojok KIRI BAWAH */
-#kupukupu3 {
-  /* Posisi Pojok KANAN BAWAH */
+  /* POSISI KIRI BAWAH */
   position: absolute; 
   bottom: 0;  
-  right: 0;   
+  left: 0;   
+}
+
+/* 4. #kupukupu3 - Posisi Pojok Kanan Bawah*/
+#kupukupu3 {
+  width: 50px; /* Tambahkan ukuran */
+  height: auto;
+  
+  /* POSISI KANAN BAWAH */
+  position: absolute;
+  bottom: 0;  
+  right: 0;
 }
