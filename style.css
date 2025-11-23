@@ -264,7 +264,7 @@ body::before {
     color: #FF6863; /* Hot Pink */
     font-size: 30px;
     padding: 10px;
-    padding-bottom: 90px;
+    padding-bottom: 95px;
     
     /* 2. Stroke Warna Putih dan Bayangan Selaras */
     /* Menggunakan multi-layer text-shadow untuk simulasi stroke */
@@ -298,7 +298,7 @@ body::before {
             width: 80%;
             max-width: 840px; /* Batasan lebar agar konten tidak terlalu lebar */
             color: #fff; 
-            background-color: rgba(100, 100, 100, 0.7); /* Background transparan untuk box */
+            background-color: rgba(130, 130, 130, 0.7); /* Background transparan untuk box */
             padding: 20px;
             border-radius: 10px; /* Opsional: membuat sudut lebih lembut */
         }
