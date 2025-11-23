@@ -248,7 +248,7 @@ body::before {
     padding: 10px;
     line-height: 2em;
     text-decoration: none;
-    min-width: 100px;
+    min-width: 120px;
     outline: none;
 }
 
