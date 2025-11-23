@@ -14,4 +14,12 @@
   animation-duration: 4s;          /* Durasi satu putaran (misalnya, 4 detik) */
   animation-iteration-count: infinite; /* Ulangi terus menerus */
   animation-timing-function: linear; /* Kecepatan konstan tanpa percepatan/perlambatan */
+  width: 100px; /* Ukuran yang sudah diubah */
+  
+  /* Membuat gambar "mengapung" di sisi kiri */
+  float: left;
+  
+  /* Menambahkan sedikit spasi di sekitar gambar agar tidak menempel pada teks/elemen lain */
+  margin-right: 15px;
+  margin-bottom: 5px;
 }
