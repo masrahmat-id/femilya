@@ -18,12 +18,12 @@ body {
     position: relative;
     z-index: 1; /* Konten body di atas overlay */
     /*Cursor*/
-    cursor: url("cursor-hellokitty2.png"), auto;
+    cursor: url("miku-cursor2.png"), auto;
 }
 
 /* Menggunakan kursor gambar dari URL untuk semua tombol */
 button {
-  cursor: url('https://github.com/masrahmat-id/femilya/raw/main/cute-cat-unicorn-2.png'), pointer;
+  cursor: url('https://github.com/masrahmat-id/femilya/raw/main/miku-cursor2.png'), pointer;
 }
 
 /* Mengganti kursor saat mouse diarahkan ke tombol */
